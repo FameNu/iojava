@@ -1,0 +1,7 @@
+This is INT103 Advanced Programming
+We learn about
+    1. OOP
+    2. functional programming
+    3. file I/O
+    4. read and write data from DB
+My name Phuwamet Panjachalermrat. My Student ID is 65130500066
