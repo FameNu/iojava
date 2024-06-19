@@ -3,6 +3,8 @@ import practice.ResultCity;
 import practice.ResultRunningNumber;
 import readwrite01.*;
 
+import java.text.DecimalFormat;
+
 public class Main {
     private final static String dirPath = "file/";
     public static void main(String[] args) {
@@ -30,25 +32,26 @@ public class Main {
     }
 
     public static void practice() {
+        DecimalFormat decimalFormat = new DecimalFormat("#,###");
         PracticeLast practiceLast = new PracticeLast();
 //        practiceLast.readCSV();
         ResultCity resultCity = practiceLast.search("Tokyo");
         if (resultCity != null) {
             System.out.println("find on latitude = " + resultCity.getLatitude());
             System.out.println("find on longitude = " + resultCity.getLongitude());
-            System.out.println("and population = " + resultCity.getPopulation());
+            System.out.println("and population = " + decimalFormat.format(resultCity.getPopulation()));
         } else {
             System.out.println("City not found.");
         }
 
         long findPopulation = practiceLast.findPopulation("Japan");
-        System.out.println("Population of Japan = " + findPopulation);
+        System.out.println("Population of Japan = " + decimalFormat.format(findPopulation));
 
         ResultRunningNumber findRunningNumber = practiceLast.searchRunningNumber(1392685764);
         if (findRunningNumber != null) {
             System.out.println("find on city = " + findRunningNumber.getCity());
             System.out.println("find on country = " + findRunningNumber.getCountry());
-            System.out.println("and population = " + findRunningNumber.getPopulation());
+            System.out.println("and population = " + decimalFormat.format(findRunningNumber.getPopulation()));
         } else {
             System.out.println("Running Number not found.");
         }
