@@ -1,3 +1,5 @@
+import db.CustomerForm;
+import db.DatabaseClass;
 import practice.PracticeLast;
 import practice.ResultCity;
 import practice.ResultRunningNumber;
@@ -10,7 +12,21 @@ public class Main {
     public static void main(String[] args) {
 //        morning();
 //        afternoon();
-        practice();
+//        practice();
+//        morningDB();
+        afternoonGUI();
+    }
+
+    public static void morningDB() {
+        DatabaseClass databaseClass = new DatabaseClass();
+//        databaseClass.testConnection();
+        databaseClass.findCustomer("John");
+        databaseClass.closeConnection();
+    }
+
+    public static void afternoonGUI() {
+        CustomerForm customerName = new CustomerForm();
+
     }
 
     public static void morning() {
