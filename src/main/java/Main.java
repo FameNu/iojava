@@ -1,3 +1,5 @@
+import collectionFrame.Framework;
+import collectionFrame.LabPractice;
 import db.CustomerForm;
 import db.DatabaseClass;
 import practice.PracticeLast;
@@ -14,7 +16,24 @@ public class Main {
 //        afternoon();
 //        practice();
 //        morningDB();
-        afternoonGUI();
+//        afternoonGUI();
+        afternoonCF();
+//        CFLab();
+    }
+
+    public static void CFLab() {
+        LabPractice lab = new LabPractice();
+        lab.Lab3();
+    }
+
+    public static void afternoonCF() {
+        Framework framework = new Framework();
+//        framework.arrayListLab();
+//        framework.linkListLab();
+//        framework.stackLab();
+//        framework.queueLab();
+//        framework.setLab();
+        framework.mapLab();
     }
 
     public static void morningDB() {
